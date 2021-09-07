@@ -24,7 +24,7 @@
     "build": "node scripts/build.js && npm run build:css",
     "build:css": "tailwindcss -o dist/styles.css --minify",
     "rebuild": "npm run clean && npm run build",
-    "patch": "./scripts/patch.sh",
+    "publish": "./scripts/publish.sh",
     "release": "standard-version",
     "clean": "./scripts/clean.sh"
   },
