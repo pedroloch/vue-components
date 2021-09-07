@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/pedroloch/vue-components/compare/v0.0.2...v0.0.3) (2021-09-07)
+
+
+### Bug Fixes
+
+* script change ([1172729](https://github.com/pedroloch/vue-components/commit/1172729d132dffeafe7a5454703e9b4d4b7a0d19))
+
 ### 0.0.2 (2021-09-07)
 
 
