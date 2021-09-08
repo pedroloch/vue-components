@@ -24,6 +24,7 @@ export const focusClass = {
   coolGray: 'focus-within:text-coolGray',
   blueGray: 'focus-within:text-blueGray',
   brand: 'focus-within:text-brand',
+  mix: 'focus-within:text-mix',
 }
 
 export const focusWithinClass = {
@@ -68,6 +69,7 @@ export const focusWithinClass = {
     'focus-within:border-blueGray-500 focus-within:ring-blueGray-50 focus-within:ring-2',
   brand:
     'focus-within:border-brand-500 focus-within:ring-brand-50 focus-within:ring-2',
+  mix: 'focus-within:border-mix-500 focus-within:ring-mix-50 focus-within:ring-2',
 }
 
 export const statusClass = {
