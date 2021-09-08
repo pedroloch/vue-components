@@ -1,8 +1,13 @@
 import { defineComponent } from 'vue'
+import { PInput } from './components'
 
 export default defineComponent({
   name: 'App',
   setup() {
-    return () => <div></div>
+    return () => (
+      <div>
+        <PInput />
+      </div>
+    )
   },
 })
