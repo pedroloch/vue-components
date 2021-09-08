@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/pedroloch/vue-components/compare/v0.0.4...v0.0.5) (2021-09-08)
+
+
+### Bug Fixes
+
+* input mask error ([0d6d077](https://github.com/pedroloch/vue-components/commit/0d6d07776964d6f437ffb669be2feb246e6f7e2a))
+
 ### [0.0.4](https://github.com/pedroloch/vue-components/compare/v0.0.3...v0.0.4) (2021-09-08)
 
 
