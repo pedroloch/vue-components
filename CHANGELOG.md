@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/pedroloch/vue-components/compare/v0.0.11...v0.0.12) (2021-09-08)
+
+
+### Features
+
+* append and prepend accept vnode or component object ([5c3cd6b](https://github.com/pedroloch/vue-components/commit/5c3cd6b9d17e991819ba17234340717999f26942))
+
 ### [0.0.11](https://github.com/pedroloch/vue-components/compare/v0.0.10...v0.0.11) (2021-09-08)
 
 
