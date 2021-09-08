@@ -3,10 +3,11 @@ import {
   ListboxButton,
   ListboxOption,
   ListboxOptions,
-} from '@headlessui/vue'
-import { defineComponent, PropType, Transition } from 'vue'
+} from '@/lib/headlessui/listbox'
+import { defineComponent, PropType, ref, Transition } from 'vue'
 import Check from '../icons/Check'
 import Chevron from '../icons/Chevron'
+import DoubleArrow from '../icons/DoubleArrow'
 import PWrapper, { wrapperProps } from './PWrapper'
 
 type Options = {
@@ -14,9 +15,26 @@ type Options = {
   label: string | (() => JSX.Element)
 }
 
+// const renderOption = (option: string | Options) => {
+//   if (typeof option === 'string') return option
+//   if (typeof option.label === 'string') return option.label
+//   return option.label()
+// }
+
+// const renderSelected = (
+//   options: (string | Options)[],
+//   modelValue: string | number | Date
+// ) => {
+//   if (options.every((option) => typeof option === 'string')) return modelValue
+//   else
+//     return (options as Options[])
+//       .find((option) => option.value === modelValue)
+//       ?.label()
+// }
+
 export default defineComponent({
   inheritAttrs: false,
-  name: 'PListbox',
+  name: 'SListbox',
   props: {
     ...wrapperProps,
     modelValue: {
@@ -52,18 +70,17 @@ export default defineComponent({
       return option.label()
     }
 
-    const Component = () => (
+    const Component = (
       <Listbox
-        as='div'
         modelValue={props.modelValue}
         //@ts-ignore
         onUpdate:modelValue={(value) => {
           emit('update:modelValue', value)
         }}
-        class={['w-full']}
+        class='w-full'
       >
         <div class='relative'>
-          <ListboxButton class='relative cursor-pointer w-full rounded pl-3 pr-16 py-2 text-left focus:outline-none sm:text-sm'>
+          <ListboxButton class='relative cursor-pointer w-full rounded pl-3 pr-12 py-2 text-left focus:outline-none sm:text-sm'>
             <div> {getButton(props.options)}</div>
             <span class='ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
               <Chevron
@@ -126,10 +143,10 @@ export default defineComponent({
     )
 
     return props.noWrapper
-      ? () => Component()
+      ? () => Component
       : () => (
           <PWrapper {...attrs} {...props}>
-            {Component()}
+            {Component}
           </PWrapper>
         )
   },
