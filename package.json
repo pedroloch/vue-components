@@ -1,6 +1,6 @@
 {
   "name": "@pedroloch/components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Components by Pedro Loch",
   "files": [
     "dist",
@@ -24,7 +24,7 @@
     "build": "node scripts/build.js && npm run build:css",
     "build:css": "tailwindcss -o dist/styles.css --minify",
     "rebuild": "npm run clean && npm run build",
-    "publish": "./scripts/publish.sh",
+    "publish": "npm run release && npm run rebuild && npm publish --access public",
     "release": "standard-version",
     "clean": "./scripts/clean.sh"
   },
