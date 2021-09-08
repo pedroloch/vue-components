@@ -2,9 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### Features
+### [0.0.11](https://github.com/pedroloch/vue-components/compare/v0.0.10...v0.0.11) (2021-09-08)
 
-* new color mix ([d53d053](https://github.com/pedroloch/vue-components/commit/d53d0538f17c526c8871708dc60e73ffc7fcd350))
+
+### Bug Fixes
+
+* script publish ([5ee2b9b](https://github.com/pedroloch/vue-components/commit/5ee2b9bd1c88f63ca481e8fb2e238f821b8410ee))
 
 ### [0.0.5](https://github.com/pedroloch/vue-components/compare/v0.0.4...v0.0.5) (2021-09-08)
 
