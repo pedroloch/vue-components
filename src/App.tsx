@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, isVNode } from 'vue'
 import { PInput } from './components'
 
 export default defineComponent({

@@ -1,3 +1,4 @@
+import { renderComponent } from '@/helpers/render-component'
 import { Color } from '@/types'
 import { Component, defineComponent, PropType, Slot } from 'vue'
 import Check from '../icons/Check'
@@ -81,11 +82,15 @@ export default defineComponent({
           ]}
         >
           {props.prepend && (
-            <div class='flex justify-center items-center'>{props.prepend}</div>
+            <div class='flex justify-center items-center'>
+              {renderComponent(props.prepend, { class: ['h-4 px-3'] })}
+            </div>
           )}
           {slots.default?.()}
           {props.append && (
-            <div class='flex justify-center items-center '>{props.append}</div>
+            <div class='flex justify-center items-center '>
+              {renderComponent(props.append, { class: ['h-4 px-3'] })}
+            </div>
           )}
 
           {props.status && (
