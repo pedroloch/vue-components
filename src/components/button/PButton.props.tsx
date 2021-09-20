@@ -23,4 +23,5 @@ export default {
     type: Number,
     validator: (value: number) => value >= 0 && value <= 100,
   },
+  onClick: Function as PropType<(e: MouseEvent) => void>,
 }

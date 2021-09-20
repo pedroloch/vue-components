@@ -88,7 +88,7 @@ export default defineComponent({
           )}
           {slots.default?.()}
           {props.append && (
-            <div class="flex justify-center items-center ">
+            <div class="flex justify-center items-center">
               {renderComponent(props.append, { class: ['h-4 px-3'] })}
             </div>
           )}
