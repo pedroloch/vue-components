@@ -26,10 +26,12 @@
     "rebuild": "npm run clean && npm run build",
     "pub": "npm run release && npm run rebuild && npm publish --access public",
     "release": "standard-version",
-    "clean": "./scripts/clean.sh"
+    "clean": "./scripts/clean.sh",
+    "gen": "node ./scripts/generate-color.js"
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
+    "@vueuse/core": "^6.4.1",
     "maska": "^1.4.5",
     "vue": "3.2.9"
   },

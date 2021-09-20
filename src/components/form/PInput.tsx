@@ -1,12 +1,12 @@
 import { getId } from '@/helpers/uuid'
 import { maska } from 'maska'
-import Maska from 'maska'
 import { defineComponent, PropType } from 'vue'
 import PWrapper, { wrapperProps } from './PWrapper'
 
 export default defineComponent({
-  inheritAttrs: false,
   name: 'SInput',
+  inheritAttrs: false,
+  emits: ['update:modelValue'],
   props: {
     ...wrapperProps,
     modelValue: {
@@ -37,26 +37,30 @@ export default defineComponent({
     const id = getId('input')
     const name = props.name ?? id
 
+    const handleInput = (e: Event) => {
+      const value =
+        props.type === 'number'
+          ? parseFloat((e.target as HTMLInputElement).value)
+          : (e.target as HTMLInputElement).value
+
+      emit('update:modelValue', value)
+    }
+
+    const inputClasses = [
+      'py-2 border-none focus:outline-none focus:ring-0 apperance-none text-sm flex-grow rounded w-full dark:text-white disabled:bg-transparent disabled:cursor-not-allowed placeholder-gray-400 p-input',
+      !props.prepend && 'pl-3',
+      !props.append && 'pr-3',
+      props.invalidMsg ? null : 'text-gray-600',
+    ]
+
     return () => (
       <PWrapper {...props} name={id}>
         <input
           id={props.id}
           name={name}
-          class={[
-            'py-2 border-none focus:outline-none focus:ring-0 apperance-none text-sm flex-grow rounded w-full dark:text-white disabled:bg-transparent disabled:cursor-not-allowed placeholder-gray-400',
-            !props.prepend && 'pl-3',
-            !props.append && 'pr-3',
-            props.invalid ? null : 'text-gray-600',
-          ]}
+          class={inputClasses}
           value={props.modelValue}
-          onInput={(e) => {
-            const value =
-              props.type === 'number'
-                ? parseInt((e.target as HTMLInputElement).value)
-                : (e.target as HTMLInputElement).value
-
-            emit('update:modelValue', value)
-          }}
+          onInput={handleInput}
           type={props.type}
           maxlength={props.maxLength}
           min={props.min}

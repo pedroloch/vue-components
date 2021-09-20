@@ -36,7 +36,7 @@ export default defineComponent({
         <select
           class={[
             'border-none focus:outline-none focus:ring-0 apperance-none flex-grow bg-white rounded pr-9',
-            props.invalid ? null : 'text-gray-600',
+            props.invalidMsg ? null : 'text-gray-600',
             fontSizes[props.size],
           ]}
           //@ts-ignore

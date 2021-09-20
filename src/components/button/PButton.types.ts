@@ -1,4 +1,4 @@
-import { Color } from '@/types'
+import { Color } from '@/colors'
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 

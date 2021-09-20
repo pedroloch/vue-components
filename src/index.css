@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+}
+
 .spinner {
   animation: rotate 2s linear infinite;
   z-index: 2;

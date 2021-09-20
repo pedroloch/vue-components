@@ -9,7 +9,7 @@ export default defineConfig({
     jsxFactory: 'h',
     jsxFragment: 'Fragment',
   },
-  plugins: [vue(), vueJsx()],
+  plugins: [vue(), vueJsx({ transformOn: true })],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
