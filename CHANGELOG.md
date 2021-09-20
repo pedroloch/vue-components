@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/pedroloch/vue-components/compare/v0.0.15...v0.0.16) (2021-09-20)
+
+
+### Features
+
+* add button features ([e49573e](https://github.com/pedroloch/vue-components/commit/e49573e508ac3eef26e56df8c7e2861d990a08fb))
+
+
+### Bug Fixes
+
+* pinput and pwrapper colors ([4c0a09d](https://github.com/pedroloch/vue-components/commit/4c0a09d2e0258be9d14aa83fd68356edeff31847))
+
 ### [0.0.15](https://github.com/pedroloch/vue-components/compare/v0.0.12...v0.0.15) (2021-09-08)
 
 ### [0.0.13](https://github.com/pedroloch/vue-components/compare/v0.0.12...v0.0.13) (2021-09-08)
