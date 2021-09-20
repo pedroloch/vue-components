@@ -64,7 +64,7 @@ export default defineComponent({
           type={props.type}
           maxlength={props.maxLength}
           min={props.min}
-          v-mask={props.mask && `${props.mask}`}
+          v-mask={props.mask}
           step={props.step}
           disabled={props.disabled}
           placeholder={props.placeholder}
