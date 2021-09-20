@@ -1,6 +1,10 @@
 {
   "name": "@pedroloch/components",
+<<<<<<< HEAD
   "version": "0.0.19",
+=======
+  "version": "0.0.18",
+>>>>>>> 8ae54c437a8c35936366fe0aff8f4eada5854eb0
   "description": "Components by Pedro Loch",
   "files": [
     "dist",
