@@ -7,6 +7,7 @@ yarn-error.log*
 .travis.yml
 *.map
 dist/demo.html
+src/demo
 
 .idea
 .vscode
