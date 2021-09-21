@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/pedroloch/vue-components/compare/v0.0.27...v0.0.28) (2021-09-21)
+
+
+### Bug Fixes
+
+* colors ([3f212ac](https://github.com/pedroloch/vue-components/commit/3f212ac6d175de50b48ef0d1c4b9716b3c21110d))
+
 ### [0.0.27](https://github.com/pedroloch/vue-components/compare/v0.0.26...v0.0.27) (2021-09-21)
 
 ### [0.0.26](https://github.com/pedroloch/vue-components/compare/v0.0.25...v0.0.26) (2021-09-21)

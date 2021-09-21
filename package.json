@@ -1,6 +1,6 @@
 {
   "name": "@pedroloch/components",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "Components by Pedro Loch",
   "files": [
     "dist",
