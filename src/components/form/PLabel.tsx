@@ -6,13 +6,17 @@ export default defineComponent({
   props: {
     helper: String,
     required: Boolean,
+    for: { type: String, required: true },
   },
   directives: {
     tooltip: tooltips,
   },
   setup(props, { slots }) {
     return () => (
-      <span class="p-label text-left text-sm px-1 flex items-center dark:text-white justify-between">
+      <label
+        for={props.for}
+        class="p-label text-left text-sm px-1 flex items-center dark:text-white justify-between"
+      >
         <div class="space-x-1 flex items-start">
           <span>{slots.default?.()}</span>
           {props.required && (
@@ -28,7 +32,7 @@ export default defineComponent({
             </span>
           </div>
         )}
-      </span>
+      </label>
     )
   },
 })

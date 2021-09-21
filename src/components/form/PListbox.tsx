@@ -4,7 +4,7 @@ import {
   ListboxOption,
   ListboxOptions,
 } from '@headlessui/vue'
-import { defineComponent, PropType, Transition } from 'vue'
+import { defineComponent, PropType, Transition, createVNode, inject } from 'vue'
 import Check from '../icons/Check'
 import Chevron from '../icons/Chevron'
 import PWrapper, { wrapperProps } from './PWrapper'
@@ -12,6 +12,11 @@ import PWrapper, { wrapperProps } from './PWrapper'
 export type PListboxOptions = {
   value: null | string | number
   label: string | (() => JSX.Element)
+}
+const getOption = (option: string | PListboxOptions) => {
+  if (typeof option === 'string') return option
+  if (typeof option.label === 'string') return option.label
+  return option.label()
 }
 
 export default defineComponent({
@@ -46,21 +51,16 @@ export default defineComponent({
       return option()
     }
 
-    const getOption = (option: string | PListboxOptions) => {
-      if (typeof option === 'string') return option
-      if (typeof option.label === 'string') return option.label
-      return option.label()
-    }
-
     const Component = () => (
       <Listbox
-        as="div"
-        modelValue={props.modelValue}
         //@ts-ignore
+        id={id}
+        modelValue={props.modelValue}
+        //@ts-expect-error
         onUpdate:modelValue={(value) => {
           emit('update:modelValue', value)
         }}
-        class={['w-full']}
+        class="w-full"
       >
         <div class="relative">
           <ListboxButton class="relative cursor-pointer w-full rounded pl-3 pr-16 py-2 text-left focus:outline-none sm:text-sm">
@@ -77,7 +77,10 @@ export default defineComponent({
             leave-from-class="opacity-100"
             leave-to-class="opacity-0"
           >
-            <ListboxOptions class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+            <ListboxOptions
+              unmount
+              class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+            >
               {!props.options.length ? (
                 <div class="px-3 py-2 flex justify-center items-center">
                   No items
@@ -86,7 +89,6 @@ export default defineComponent({
                 props.options.map((option, index) => {
                   return (
                     <ListboxOption
-                      as="div"
                       key={index}
                       value={typeof option === 'string' ? option : option.value}
                     >

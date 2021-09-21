@@ -66,7 +66,7 @@ export default defineComponent({
     ])
 
     return () => (
-      <label
+      <div
         class={[
           'flex flex-col dark:text-white w-full',
           !props.invalidMsg ? `text-gray-700` : 'text-red-500',
@@ -74,6 +74,7 @@ export default defineComponent({
         {...attrs}
       >
         <PLabel
+          for={props.name ?? ''}
           required={props.required}
           helper={props.helper}
           class={[props.invalidMsg && 'text-red-500']}
@@ -113,7 +114,7 @@ export default defineComponent({
             {props.hint}
           </span>
         )}
-      </label>
+      </div>
     )
   },
 })
