@@ -7,6 +7,7 @@ import {
 import { defineComponent, PropType, Transition, createVNode, inject } from 'vue'
 import Check from '../icons/Check'
 import Chevron from '../icons/Chevron'
+import DoubleArrow from '../icons/DoubleArrow'
 import PWrapper, { wrapperProps } from './PWrapper'
 
 export type PListboxOptions = {
@@ -33,6 +34,10 @@ export default defineComponent({
       default: () => [],
     },
     noWrapper: Boolean,
+    direction: {
+      type: String as PropType<'up' | 'down'>,
+      default: 'down',
+    },
   },
   setup(props, { attrs, emit }) {
     const isStringArray = (options: any[]): options is string[] => {
@@ -66,10 +71,7 @@ export default defineComponent({
           <ListboxButton class="relative cursor-pointer w-full rounded pl-3 pr-16 py-2 text-left focus:outline-none sm:text-sm">
             <div> {getButton(props.options)}</div>
             <span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-              <Chevron
-                class="h-4 text-gray-400 -rotate-90"
-                aria-hidden="true"
-              />
+              <DoubleArrow class="h-4 text-gray-400" aria-hidden="true" />
             </span>
           </ListboxButton>
           <Transition
@@ -78,8 +80,10 @@ export default defineComponent({
             leave-to-class="opacity-0"
           >
             <ListboxOptions
-              unmount
-              class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+              class={[
+                'absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm',
+                props.direction === 'up' ? 'bottom-full -translate-y-2 ' : '',
+              ]}
             >
               {!props.options.length ? (
                 <div class="px-3 py-2 flex justify-center items-center">
