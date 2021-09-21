@@ -1,5 +1,6 @@
 export * from './button'
 export * from './form/PListbox'
 export { default as PInput } from './form/PInput'
+export { default as PInputNumber } from './form/PInputNumber'
 export { default as PListBox } from './form/PListbox'
 export { default as PSelect } from './form/PSelect'
