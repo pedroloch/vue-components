@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.25](https://github.com/pedroloch/vue-components/compare/v0.0.24...v0.0.25) (2021-09-21)
+
+
+### Bug Fixes
+
+* listbox not closing ([d4a6102](https://github.com/pedroloch/vue-components/commit/d4a61028704da9e988d0e195b531be425f2eafde))
+
 ### [0.0.24](https://github.com/pedroloch/vue-components/compare/v0.0.23...v0.0.24) (2021-09-21)
 
 ### [0.0.23](https://github.com/pedroloch/vue-components/compare/v0.0.22...v0.0.23) (2021-09-21)
