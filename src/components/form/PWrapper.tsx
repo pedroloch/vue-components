@@ -1,7 +1,7 @@
 import { Color } from '@/colors'
 import { renderComponent } from '@/helpers/render-component'
 
-import { Component, defineComponent, PropType, Slot } from 'vue'
+import { Component, computed, defineComponent, PropType, Slot } from 'vue'
 import Check from '../icons/Check'
 import ExclamationCircle from '../icons/ExclamationCircle'
 import Warning from '../icons/Warning'
@@ -57,13 +57,13 @@ export default defineComponent({
   name: 'SWrapper',
   props: wrapperProps,
   setup(props, { slots, attrs }) {
-    const wrapperClass = [
+    const wrapperClass = computed(() => [
       'border rounded w-full flex bg-white mt-0.5 p-wrapper',
       props.status
         ? statusClass[props.status]
         : `${getFocusWithinClass(props.color)} border-gray-300`,
       props.disabled && 'bg-gray-100 cursor-not-allowed',
-    ]
+    ])
 
     return () => (
       <label
