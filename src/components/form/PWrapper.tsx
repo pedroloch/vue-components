@@ -80,7 +80,7 @@ export default defineComponent({
         >
           {props.label}
         </PLabel>
-        <div class={wrapperClass}>
+        <div class={wrapperClass.value}>
           {props.prepend && (
             <div class="flex justify-center items-center">
               {renderComponent(props.prepend, { class: ['h-4 px-3'] })}
