@@ -4,7 +4,7 @@ import { defineComponent, PropType } from 'vue'
 import PWrapper, { wrapperProps } from './PWrapper'
 
 export default defineComponent({
-  name: 'SInput',
+  name: 'PInput',
   inheritAttrs: false,
   emits: ['update:modelValue'],
   props: {

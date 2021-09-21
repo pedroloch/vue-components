@@ -16,7 +16,7 @@ type Options = {
 
 export default defineComponent({
   inheritAttrs: false,
-  name: 'SListbox',
+  name: 'PListbox',
   props: {
     ...wrapperProps,
     modelValue: {

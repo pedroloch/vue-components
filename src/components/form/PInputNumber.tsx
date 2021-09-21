@@ -1,10 +1,9 @@
 import { getId } from '@/helpers/uuid'
-import { maska } from 'maska'
-import { defineComponent, getCurrentInstance, PropType } from 'vue'
+import { defineComponent, getCurrentInstance } from 'vue'
 import PWrapper, { wrapperProps } from './PWrapper'
 
 export default defineComponent({
-  name: 'SInputNumber',
+  name: 'PInputNumber',
   inheritAttrs: false,
   emits: ['update:modelValue'],
   props: {

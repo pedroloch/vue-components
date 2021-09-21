@@ -54,7 +54,7 @@ const StatusIcon = (status?: Status) => {
 }
 
 export default defineComponent({
-  name: 'SWrapper',
+  name: 'PWrapper',
   props: wrapperProps,
   setup(props, { slots, attrs }) {
     const wrapperClass = computed(() => [

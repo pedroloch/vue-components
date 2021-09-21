@@ -2,7 +2,7 @@ import tooltips from '@/directives/tooltips'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'SLabel',
+  name: 'PLabel',
   props: {
     helper: String,
     required: Boolean,
