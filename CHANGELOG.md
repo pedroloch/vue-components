@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.21](https://github.com/pedroloch/vue-components/compare/v0.0.20...v0.0.21) (2021-09-21)
+
+
+### Bug Fixes
+
+* onClick button ([328b742](https://github.com/pedroloch/vue-components/commit/328b7429dc700f45dc0c22cb63886af069c1dd0e))
+
 ### [0.0.20](https://github.com/pedroloch/vue-components/compare/v0.0.19...v0.0.20) (2021-09-20)
 
 ### [0.0.18](https://github.com/pedroloch/vue-components/compare/v0.0.17...v0.0.18) (2021-09-20)
