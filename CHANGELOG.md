@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.29](https://github.com/pedroloch/vue-components/compare/v0.0.28...v0.0.29) (2021-09-21)
+
+
+### Features
+
+* add PInputNumber ([cfb5d2e](https://github.com/pedroloch/vue-components/commit/cfb5d2ea2dca012aaefdd88de6f8e064a9a7a712))
+
 ### [0.0.28](https://github.com/pedroloch/vue-components/compare/v0.0.27...v0.0.28) (2021-09-21)
 
 
