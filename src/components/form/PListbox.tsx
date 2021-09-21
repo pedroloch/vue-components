@@ -9,8 +9,8 @@ import Check from '../icons/Check'
 import Chevron from '../icons/Chevron'
 import PWrapper, { wrapperProps } from './PWrapper'
 
-type Options = {
-  value: string | number
+export type PListboxOptions = {
+  value: null | string | number
   label: string | (() => JSX.Element)
 }
 
@@ -24,7 +24,7 @@ export default defineComponent({
       default: '',
     },
     options: {
-      type: Array as PropType<string[] | Options[]>,
+      type: Array as PropType<string[] | PListboxOptions[]>,
       default: () => [],
     },
     noWrapper: Boolean,
@@ -34,7 +34,7 @@ export default defineComponent({
       return options.some((option) => typeof option === 'string')
     }
 
-    const getButton = (options: string[] | Options[]) => {
+    const getButton = (options: string[] | PListboxOptions[]) => {
       if (isStringArray(options)) return props.modelValue
 
       const option =
@@ -46,7 +46,7 @@ export default defineComponent({
       return option()
     }
 
-    const getOption = (option: string | Options) => {
+    const getOption = (option: string | PListboxOptions) => {
       if (typeof option === 'string') return option
       if (typeof option.label === 'string') return option.label
       return option.label()
@@ -54,7 +54,7 @@ export default defineComponent({
 
     const Component = () => (
       <Listbox
-        as='div'
+        as="div"
         modelValue={props.modelValue}
         //@ts-ignore
         onUpdate:modelValue={(value) => {
@@ -62,31 +62,31 @@ export default defineComponent({
         }}
         class={['w-full']}
       >
-        <div class='relative'>
-          <ListboxButton class='relative cursor-pointer w-full rounded pl-3 pr-16 py-2 text-left focus:outline-none sm:text-sm'>
+        <div class="relative">
+          <ListboxButton class="relative cursor-pointer w-full rounded pl-3 pr-16 py-2 text-left focus:outline-none sm:text-sm">
             <div> {getButton(props.options)}</div>
-            <span class='ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
+            <span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <Chevron
-                class='h-4 text-gray-400 -rotate-90'
-                aria-hidden='true'
+                class="h-4 text-gray-400 -rotate-90"
+                aria-hidden="true"
               />
             </span>
           </ListboxButton>
           <Transition
-            leave-active-class='transition ease-in duration-100'
-            leave-from-class='opacity-100'
-            leave-to-class='opacity-0'
+            leave-active-class="transition ease-in duration-100"
+            leave-from-class="opacity-100"
+            leave-to-class="opacity-0"
           >
-            <ListboxOptions class='absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm'>
+            <ListboxOptions class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
               {!props.options.length ? (
-                <div class='px-3 py-2 flex justify-center items-center'>
+                <div class="px-3 py-2 flex justify-center items-center">
                   No items
                 </div>
               ) : (
                 props.options.map((option, index) => {
                   return (
                     <ListboxOption
-                      as='div'
+                      as="div"
                       key={index}
                       value={typeof option === 'string' ? option : option.value}
                     >
@@ -107,9 +107,9 @@ export default defineComponent({
                               {getOption(option)}
                               <span
                                 v-show={slot.selected}
-                                class='absolute inset-y-0 right-0 flex items-center pr-3'
+                                class="absolute inset-y-0 right-0 flex items-center pr-3"
                               >
-                                <Check class='h-5' />
+                                <Check class="h-5" />
                               </span>
                             </div>
                           )
