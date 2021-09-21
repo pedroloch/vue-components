@@ -15,14 +15,17 @@ export default defineComponent({
     return () => (
       <label
         for={props.for}
-        class="p-label text-left text-sm px-1 flex items-center dark:text-white justify-between"
+        class="p-label text-left text-sm px-1 flex items-center justify-between"
       >
-        <div class="space-x-1 flex items-start">
+        <div class="space-x-1 flex items-center">
           <span>{slots.default?.()}</span>
           {props.required && (
-            <span v-tooltip="Required" class="cursor-help text-red-500">
-              *️
-            </span>
+            <div
+              v-tooltip="Required"
+              class="h-3 w-3 text-lg flex justify-center items-center text-red-600"
+            >
+              *
+            </div>
           )}
         </div>
         {props.helper && (

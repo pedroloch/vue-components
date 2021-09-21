@@ -12,7 +12,7 @@ export default defineComponent({
   props: PButtonProps,
   setup(props, { slots }) {
     const buttonClasses = [
-      'relative overflow-hidden flex items-center justify-center shadow active:scale-95 active:shadow-none focus:ring focus:ring-offset-1 disabled:opacity-50 disabled:cursor-default',
+      'relative overflow-hidden flex items-center justify-center shadow focus:outline-none active:scale-95 active:shadow-none focus:ring focus:ring-offset-1 disabled:opacity-50 disabled:cursor-default',
       props.outlined ? getOutlineClass(props.color) : getBgClass(props.color),
       sizeClass[props.size],
       props.pill ? 'rounded-full' : 'rounded',

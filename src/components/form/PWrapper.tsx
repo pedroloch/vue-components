@@ -69,7 +69,9 @@ export default defineComponent({
       <div
         class={[
           'flex flex-col dark:text-white w-full',
-          !props.invalidMsg ? `text-gray-700` : 'text-red-500',
+          !props.invalidMsg
+            ? `focus-within:text-${props.color}-500`
+            : 'text-red-500',
         ]}
         {...attrs}
       >
