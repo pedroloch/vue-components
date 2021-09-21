@@ -36,7 +36,11 @@ export default defineComponent({
           }ch`
 
     return () => (
-      <button style={getButtonWidth(slots)} class={buttonClasses}>
+      <button
+        style={getButtonWidth(slots)}
+        class={buttonClasses}
+        onClick={props.onClick}
+      >
         {props.loading ? (
           slots.loading?.() ?? (
             <Spinner class={[getSize(props.size), 'stroke-2']} />
