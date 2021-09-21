@@ -54,7 +54,7 @@ export default defineComponent({
     const Component = () => (
       <Listbox
         //@ts-ignore
-        id={id}
+
         modelValue={props.modelValue}
         //@ts-expect-error
         onUpdate:modelValue={(value) => {
