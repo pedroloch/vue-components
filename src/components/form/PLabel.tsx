@@ -21,8 +21,8 @@ export default defineComponent({
           <span>{slots.default?.()}</span>
           {props.required && (
             <div
-              v-tooltip="Required"
-              class="h-3 w-3 text-lg flex justify-center items-center text-red-600"
+              v-tooltip={{ placement: 'right', text: 'Required' }}
+              class="h-3 w-2 text-lg flex justify-center items-center text-red-600 mb-1"
             >
               *
             </div>
