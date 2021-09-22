@@ -10,7 +10,7 @@ export const getOutlineClass = (color: Color) =>
 export const sizeClass: SizeClass = {
   xs: 'h-6 px-2 py-1 text-xs',
   sm: 'h-7 px-2.5 py-1.5 text-sm',
-  md: 'h-9 px-3 py-2',
-  lg: 'h-10 px-3 py-3 text-lg',
-  xl: 'h-12 px-4 py-3.5 text-xl',
+  md: 'h-9 px-3 py-2 text-sm',
+  lg: 'h-10 px-3 py-3',
+  xl: 'h-12 px-4 py-3.5 text-lg',
 }
