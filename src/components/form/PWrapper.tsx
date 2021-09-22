@@ -38,6 +38,7 @@ export const wrapperProps = {
   required: Boolean,
   hint: String,
   name: { type: String },
+  noFocus: Boolean,
 } as const
 
 const StatusIcon = (status?: Status) => {
@@ -61,7 +62,9 @@ export default defineComponent({
       'border rounded w-full flex bg-white mt-0.5 p-wrapper',
       props.status
         ? statusClass[props.status]
-        : `${getFocusWithinClass(props.color)} border-gray-300`,
+        : `${
+            !props.noFocus && getFocusWithinClass(props.color)
+          } border-gray-300`,
       props.disabled && 'bg-gray-100 cursor-not-allowed',
     ])
 
@@ -98,8 +101,10 @@ export default defineComponent({
           {props.status && (
             <div
               class={[
-                'flex justify-center items-center pr-2.5 ',
-                getFocusClass(props.color),
+                `flex justify-center items-center pr-2.5 ${
+                  !props.noFocus && getFocusClass(props.color)
+                }`,
+                ,
               ]}
             >
               {StatusIcon(props.status)}

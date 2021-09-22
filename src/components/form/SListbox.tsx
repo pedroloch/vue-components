@@ -9,9 +9,10 @@ import Check from '../icons/Check'
 import Chevron from '../icons/Chevron'
 import PWrapper, { wrapperProps } from './PWrapper'
 
-type Options = {
+export type Option = {
   value: string | number
   label: string | (() => JSX.Element)
+  searchVal?: string
 }
 
 export default defineComponent({
@@ -24,7 +25,7 @@ export default defineComponent({
       default: '',
     },
     options: {
-      type: Array as PropType<string[] | Options[]>,
+      type: Array as PropType<string[] | Option[]>,
       default: () => [],
     },
     noWrapper: Boolean,
@@ -34,7 +35,7 @@ export default defineComponent({
       return options.some((option) => typeof option === 'string')
     }
 
-    const getButton = (options: string[] | Options[]) => {
+    const getButton = (options: string[] | Option[]) => {
       if (isStringArray(options)) return props.modelValue
 
       const option =
@@ -46,7 +47,7 @@ export default defineComponent({
       return option()
     }
 
-    const getOption = (option: string | Options) => {
+    const getOption = (option: string | Option) => {
       if (typeof option === 'string') return option
       if (typeof option.label === 'string') return option.label
       return option.label()
