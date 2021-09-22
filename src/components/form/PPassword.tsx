@@ -13,8 +13,6 @@ export default defineComponent({
   setup(props, { attrs, slots }) {
     const showPass = ref(false)
     const toggleShowPass = () => {
-      console.log('aqui')
-
       showPass.value = !showPass.value
     }
 

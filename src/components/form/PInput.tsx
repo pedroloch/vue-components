@@ -52,8 +52,8 @@ export default defineComponent({
 
     const inputClasses = [
       'py-2 px-0 border-none focus:outline-none focus:ring-0 apperance-none text-sm flex-grow rounded w-full dark:text-white disabled:bg-transparent disabled:cursor-not-allowed placeholder-gray-400 p-input',
-      !props.prepend && 'pl-3',
-      !props.append && 'pr-3',
+      // !props.prepend && 'pl-3',
+      // !props.append && 'pr-3',
       props.invalidMsg ? null : 'text-gray-600',
     ]
 
