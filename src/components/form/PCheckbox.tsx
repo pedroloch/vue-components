@@ -28,9 +28,10 @@ export default defineComponent({
       type: Function as PropType<(e: Event) => void>,
     },
     checked: Boolean,
+    id: String,
   },
   setup(props, { emit, attrs }) {
-    const id = getId('checkbox')
+    const id = props.id ?? getId('checkbox')
 
     const onChange = (e: Event) =>
       emit(

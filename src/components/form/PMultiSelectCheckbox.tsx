@@ -103,14 +103,22 @@ export default defineComponent({
           {filteredOptions.value.map((option, i) => (
             <div
               key={i}
-              class="flex justify-between items-center px-2.5 py-1.5 bg-gray-50 even:bg-white text-gray-700"
+              class={[
+                'flex justify-between items-center px-2.5 py-1.5 text-gray-700',
+                isSelected(option)
+                  ? `bg-${props.color}-50 even:bg-${props.color}-100`
+                  : 'bg-gray-50 even:bg-white',
+              ]}
             >
-              {typeof option === 'string'
-                ? option
-                : typeof option.label === 'string'
-                ? option.label
-                : option.label()}
+              <label for={`select-option-${i}`}>
+                {typeof option === 'string'
+                  ? option
+                  : typeof option.label === 'string'
+                  ? option.label
+                  : option.label()}
+              </label>
               <PCheckbox
+                id={`select-option-${i}`}
                 color={props.color}
                 checked={isSelected(option)}
                 onChange={() => handleCheckbox(option)}

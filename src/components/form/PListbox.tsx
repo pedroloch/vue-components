@@ -106,8 +106,8 @@ export default defineComponent({
                               class={[
                                 'px-3 py-2 relative cursor-default select-none ',
                                 slot.active
-                                  ? 'bg-brand text-white'
-                                  : 'hover:bg-brand-100 text-gray-600',
+                                  ? `bg-${props.color}-500 text-white`
+                                  : `hover:bg-${props.color}-100 text-gray-600`,
                               ]}
                             >
                               {getOption(option)}
