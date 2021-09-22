@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.37](https://github.com/pedroloch/vue-components/compare/v0.0.36...v0.0.37) (2021-09-22)
+
+
+### Bug Fixes
+
+* ppassword console.log ([ce813c4](https://github.com/pedroloch/vue-components/commit/ce813c4c8b0f44ef6671198b33844d0309d45afd))
+
 ### [0.0.36](https://github.com/pedroloch/vue-components/compare/v0.0.35...v0.0.36) (2021-09-22)
 
 
