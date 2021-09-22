@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.42](https://github.com/pedroloch/vue-components/compare/v0.0.41...v0.0.42) (2021-09-22)
+
+
+### Features
+
+* checkbox and multiselect ([fb85dc1](https://github.com/pedroloch/vue-components/commit/fb85dc103e7d140bab59e223b886d7457bffe71a))
+
 ### [0.0.41](https://github.com/pedroloch/vue-components/compare/v0.0.40...v0.0.41) (2021-09-22)
 
 
