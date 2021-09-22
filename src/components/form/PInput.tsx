@@ -3,32 +3,36 @@ import { maska } from 'maska'
 import { defineComponent, PropType } from 'vue'
 import PWrapper, { wrapperProps } from './PWrapper'
 
+export const pInputProps = {
+  modelValue: {
+    type: [String, Number, Date],
+    default: '',
+  },
+  type: {
+    type: String as PropType<'text' | 'number' | 'password'>,
+  },
+  maxLength: {
+    type: Number,
+  },
+  id: String,
+  min: Number,
+  step: Number,
+  disabled: Boolean,
+  placeholder: String,
+  mask: {
+    type: [String, Object, Array] as PropType<string | object | string[]>,
+  },
+  name: String,
+  autocomplete: String,
+}
+
 export default defineComponent({
   name: 'PInput',
   inheritAttrs: false,
   emits: ['update:modelValue'],
   props: {
     ...wrapperProps,
-    modelValue: {
-      type: [String, Number, Date],
-      default: '',
-    },
-    type: {
-      type: String as PropType<'text' | 'number' | 'password'>,
-    },
-    maxLength: {
-      type: Number,
-    },
-    id: String,
-    min: Number,
-    step: Number,
-    disabled: Boolean,
-    placeholder: String,
-    mask: {
-      type: [String, Object, Array] as PropType<string | object | string[]>,
-    },
-    name: String,
-    autocomplete: String,
+    ...pInputProps,
   },
   directives: {
     mask: maska,
@@ -47,7 +51,7 @@ export default defineComponent({
     }
 
     const inputClasses = [
-      'py-2 border-none focus:outline-none focus:ring-0 apperance-none text-sm flex-grow rounded w-full dark:text-white disabled:bg-transparent disabled:cursor-not-allowed placeholder-gray-400 p-input',
+      'py-2 px-0 border-none focus:outline-none focus:ring-0 apperance-none text-sm flex-grow rounded w-full dark:text-white disabled:bg-transparent disabled:cursor-not-allowed placeholder-gray-400 p-input',
       !props.prepend && 'pl-3',
       !props.append && 'pr-3',
       props.invalidMsg ? null : 'text-gray-600',
