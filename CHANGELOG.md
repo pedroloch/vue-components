@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/pedroloch/vue-components/compare/v0.1.1...v0.1.2) (2021-09-23)
+
 ### [0.1.1](https://github.com/pedroloch/vue-components/compare/v0.0.51...v0.1.1) (2021-09-23)
 
 ### [0.0.51](https://github.com/pedroloch/vue-components/compare/v0.0.50...v0.0.51) (2021-09-23)
