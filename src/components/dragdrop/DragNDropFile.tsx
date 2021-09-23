@@ -31,7 +31,6 @@ export default defineComponent({
 
       if (props.accept && ext && !props.accept.includes(ext)) {
         emit('invalidFile', setStateUnset)
-        state.value = 'invalid'
         return
       }
 
