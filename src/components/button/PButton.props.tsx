@@ -1,10 +1,15 @@
 import { Color } from '@/colors'
 import { FlexComponent } from '@/helpers/render-component'
+import { Shade } from '@/helpers/shades'
 import { PropType } from '@vue/runtime-core'
 import { Size } from './PButton.types'
 
 export default {
   color: { type: String as PropType<Color>, default: 'blue' },
+  colorShade: {
+    type: String as PropType<Shade>,
+    default: '500',
+  },
   outlined: Boolean,
   pill: Boolean,
   disabled: Boolean,

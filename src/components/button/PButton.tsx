@@ -12,8 +12,11 @@ export default defineComponent({
   props: PButtonProps,
   setup(props, { slots }) {
     const buttonClasses = [
-      'relative overflow-hidden flex items-center justify-center focus:outline-none active:scale-95 active:shadow-none focus:ring focus:ring-offset-1 disabled:opacity-50 disabled:cursor-default',
-      props.outlined ? getOutlineClass(props.color) : getBgClass(props.color),
+      'relative overflow-hidden flex items-center justify-center focus:outline-none active:scale-95 active:shadow-none focus:ring focus:ring-offset-1 disabled:opacity-50 disabled:cursor-default disabled:cursor-not-allowed',
+
+      props.outlined
+        ? getOutlineClass(props.color, props.colorShade)
+        : getBgClass(props.color, props.colorShade),
       sizeClass[props.size],
       props.pill ? 'rounded-full' : 'rounded',
     ]
@@ -21,7 +24,7 @@ export default defineComponent({
     const progressClass = [
       'absolute inset-y-0 left-0',
       props.outlined
-        ? `bg-${props.color}-500 opacity-10`
+        ? `bg-${props.color}-${props.colorShade} opacity-10`
         : 'bg-white opacity-20',
     ]
 
@@ -40,7 +43,10 @@ export default defineComponent({
         style={getButtonWidth(slots)}
         class={buttonClasses}
         disabled={props.disabled}
-        onClick={props.onClick}
+        onClick={(e) => {
+          if (props.loading) return
+          else props.onClick?.(e)
+        }}
       >
         {props.loading ? (
           slots.loading?.() ?? (
@@ -53,7 +59,7 @@ export default defineComponent({
         ) : props.error ? (
           <span>
             {slots.error?.() ?? (
-              <ExclamationCircle class={getSize(props.size)} />
+              <ExclamationCircle class={getSize(props.size)} type="solid" />
             )}
           </span>
         ) : (
