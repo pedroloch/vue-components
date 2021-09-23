@@ -1,5 +1,5 @@
-import Spinner from '@/components/icons/Spinner'
-import { renderComponent } from '@/helpers/render-component'
+import Spinner from '../../components/icons/Spinner'
+import { renderComponent } from '../../helpers/render-component'
 import { defineComponent, Slots } from 'vue'
 import Check from '../icons/Check'
 import ExclamationCircle from '../icons/ExclamationCircle'

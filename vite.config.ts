@@ -13,16 +13,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '~': path.resolve(__dirname, 'lib'),
     },
   },
   server: {
     open: true,
     port: 12000,
-    fs: {
-      // Allow serving files from one level up to the project root
-      allow: ['..'],
-    },
   },
   build: {
     lib: {

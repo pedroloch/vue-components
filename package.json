@@ -10,12 +10,12 @@
   "module": "./dist/components.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "./src": {
-      "import": "./src/index.ts"
-    },
     ".": {
       "import": "./dist/components.es.js",
       "require": "./dist/components.umd.js"
+    },
+    "./src": {
+      "import": "./src/index.ts"
     },
     "./styles.css": {
       "import": "./dist/styles.css"

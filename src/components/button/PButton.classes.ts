@@ -1,5 +1,5 @@
-import { Color } from '@/colors'
-import { getLightenShade, Shade } from '@/helpers/shades'
+import { Color } from '../../colors'
+import { getLightenShade, Shade } from '../../helpers/shades'
 import { SizeClass } from './PButton.types'
 
 export const getBgClass = (color: Color, shade: Shade) =>

@@ -1,5 +1,5 @@
-import { Color } from '@/colors'
-import { getId } from '@/helpers/uuid'
+import { Color } from '../../colors'
+import { getId } from '../../helpers/uuid'
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
