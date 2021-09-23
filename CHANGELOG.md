@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/pedroloch/vue-components/compare/v0.1.6...v0.1.7) (2021-09-23)
+
+
+### Features
+
+* add dragndrop ([bc478dc](https://github.com/pedroloch/vue-components/commit/bc478dcaaefd4206592b33b198d4ac500f524130))
+
 ### [0.1.6](https://github.com/pedroloch/vue-components/compare/v0.1.5...v0.1.6) (2021-09-23)
 
 
