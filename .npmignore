@@ -8,6 +8,8 @@ yarn-error.log*
 *.map
 dist/demo.html
 src/demo
+dist/demo
+dist/node_modules
 
 .idea
 .vscode
