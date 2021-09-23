@@ -10,12 +10,16 @@
   "module": "./dist/components.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "./src": "./src/index.ts",
+    "./src": {
+      "import": "./src/index.ts"
+    },
     ".": {
       "import": "./dist/components.es.js",
       "require": "./dist/components.umd.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": {
+      "import": "./dist/styles.css"
+    }
   },
   "scripts": {
     "dev": "vite",
