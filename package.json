@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
-    "@pedroloch/components": "^0.0.49",
     "@vueuse/core": "^6.4.1",
     "lodash": "^4.17.21",
     "maska": "^1.4.5",
