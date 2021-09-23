@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.47](https://github.com/pedroloch/vue-components/compare/v0.0.46...v0.0.47) (2021-09-23)
+
+
+### Features
+
+* add PSwitch ([3ce7ff3](https://github.com/pedroloch/vue-components/commit/3ce7ff32ea7a072052a5cf9030e4b23eaf08c13d))
+
 ### [0.0.46](https://github.com/pedroloch/vue-components/compare/v0.0.45...v0.0.46) (2021-09-22)
 
 ### [0.0.45](https://github.com/pedroloch/vue-components/compare/v0.0.44...v0.0.45) (2021-09-22)
